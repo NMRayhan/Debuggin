@@ -28,7 +28,14 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  // let ans;
+  // if (text.length >= 30) {
+  //   ans = text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  // }else{
+  //   ans = text;
+  // }
+  // return ans;
+    return text.length >= 30 ? text.slice(0, 30) + "<span class='fw-bold'>... read more</span>" : text 
 };
 
 const switchTab = (id) => {
